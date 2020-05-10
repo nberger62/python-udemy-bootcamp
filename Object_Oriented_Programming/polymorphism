@@ -1,0 +1,10 @@
+polymorphism - a key principle in OOP is the idea that an object can take on many forms (morphs)
+
+ex- The same class method works in a similar way for different classes
+
+Cat.speak() meow
+Dog.speak() woof
+Human.speak() yo
+
+method overriding - each subclass will have a different implementation of he method...
+                    method is "overwritten" by a subclass!

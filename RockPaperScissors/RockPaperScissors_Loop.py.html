@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>RockPaperScissors_Loop.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6897bb;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+RockPaperScissors_Loop.py</font>
+</center></td></tr></table>
+<pre><span class="s0">from </span><span class="s1">random </span><span class="s0">import </span><span class="s1">randint</span>
+<span class="s1">player_wins = </span><span class="s2">0</span>
+<span class="s1">computer_wins = </span><span class="s2">0</span>
+<span class="s1">winning_score = </span><span class="s2">3</span>
+
+<span class="s0">while </span><span class="s1">player_wins &lt; </span><span class="s2">2 </span><span class="s0">and </span><span class="s1">computer_wins &lt; winning_score:</span>
+    <span class="s1">print(</span><span class="s3">f&quot;Player Score: </span><span class="s0">{</span><span class="s1">player_wins</span><span class="s0">} </span><span class="s3">Computer Score: </span><span class="s0">{</span><span class="s1">computer_wins</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s1">)</span>
+    <span class="s1">print(</span><span class="s3">&quot;rock...&quot;</span><span class="s1">)</span>
+    <span class="s1">print(</span><span class="s3">&quot;paper...&quot;</span><span class="s1">)</span>
+    <span class="s1">print(</span><span class="s3">&quot;scissors...&quot;</span><span class="s1">)</span>
+
+    <span class="s1">player = input(</span><span class="s3">&quot;(Enter Your Choice): &quot;</span><span class="s1">).lower()</span>
+    <span class="s0">if </span><span class="s1">player == </span><span class="s3">&quot;quit&quot; </span><span class="s0">or </span><span class="s1">player == </span><span class="s3">&quot;q&quot;</span><span class="s1">:</span>
+        <span class="s0">break</span>
+    <span class="s1">random_num = randint(</span><span class="s2">0</span><span class="s0">, </span><span class="s2">2</span><span class="s1">)</span>
+    <span class="s0">if </span><span class="s1">(random_num == </span><span class="s2">0</span><span class="s1">):</span>
+        <span class="s1">computer = </span><span class="s3">&quot;rock&quot;</span>
+    <span class="s0">elif </span><span class="s1">(random_num == </span><span class="s2">1</span><span class="s1">):</span>
+        <span class="s1">computer = </span><span class="s3">&quot;paper&quot;</span>
+    <span class="s0">else</span><span class="s1">:</span>
+        <span class="s1">computer = </span><span class="s3">&quot;scissors&quot;</span>
+
+    <span class="s1">print(</span><span class="s3">f&quot;The computer plays: </span><span class="s0">{</span><span class="s1">computer</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s1">)</span>
+
+    <span class="s0">if </span><span class="s1">player == computer:</span>
+        <span class="s1">print(</span><span class="s3">&quot;It's a tie!&quot;</span><span class="s1">)</span>
+    <span class="s0">elif </span><span class="s1">player == </span><span class="s3">&quot;rock&quot;</span><span class="s1">:</span>
+        <span class="s0">if </span><span class="s1">computer == </span><span class="s3">&quot;paper&quot;</span><span class="s1">:</span>
+            <span class="s1">print(</span><span class="s3">&quot;Computer wins :( &quot;</span><span class="s1">)</span>
+            <span class="s1">computer_wins += </span><span class="s2">1</span>
+        <span class="s0">else</span><span class="s1">:</span>
+            <span class="s1">print(</span><span class="s3">&quot;Player wins!&quot;</span><span class="s1">)</span>
+            <span class="s1">player_wins += </span><span class="s2">1</span>
+    <span class="s0">elif </span><span class="s1">player == </span><span class="s3">&quot;paper&quot;</span><span class="s1">:</span>
+        <span class="s0">if </span><span class="s1">computer == </span><span class="s3">&quot;rock&quot;</span><span class="s1">:</span>
+            <span class="s1">print(</span><span class="s3">&quot;You Win!&quot;</span><span class="s1">)</span>
+            <span class="s1">player_wins += </span><span class="s2">1</span>
+        <span class="s0">else</span><span class="s1">:</span>
+            <span class="s1">print(</span><span class="s3">&quot;Computer wins!&quot;</span><span class="s1">)</span>
+            <span class="s1">computer_wins += </span><span class="s2">1</span>
+    <span class="s0">elif </span><span class="s1">player == </span><span class="s3">&quot;scissors&quot;</span><span class="s1">:</span>
+        <span class="s0">if </span><span class="s1">computer == </span><span class="s3">&quot;rock&quot;</span><span class="s1">:</span>
+            <span class="s1">print(</span><span class="s3">&quot;Computer wins :( &quot;</span><span class="s1">)</span>
+            <span class="s1">computer_wins += </span><span class="s2">1</span>
+        <span class="s0">else</span><span class="s1">:</span>
+            <span class="s1">print(</span><span class="s3">&quot;You Win!&quot;</span><span class="s1">)</span>
+            <span class="s1">player_wins += </span><span class="s2">1</span>
+    <span class="s0">else</span><span class="s1">:</span>
+        <span class="s1">print(</span><span class="s3">&quot;Please enter a valid move!&quot;</span><span class="s1">)</span>
+
+<span class="s0">if </span><span class="s1">player_wins &gt; computer_wins:</span>
+    <span class="s1">print(</span><span class="s3">&quot;CONGRATS You Won!&quot;</span><span class="s1">)</span>
+<span class="s0">elif </span><span class="s1">player_wins == computer_wins:</span>
+    <span class="s1">print(</span><span class="s3">&quot;IT's a TIE, Good Job!&quot;</span><span class="s1">)</span>
+<span class="s0">else</span><span class="s1">:</span>
+    <span class="s1">print(</span><span class="s3">&quot;OH NO :( THE COMPUTER WON...&quot;</span><span class="s1">)</span>
+
+<span class="s1">print(</span><span class="s3">f&quot;Final Scores... Player: </span><span class="s0">{</span><span class="s1">player_wins</span><span class="s0">} </span><span class="s3">Computer: </span><span class="s0">{</span><span class="s1">computer_wins</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s1">)</span>
+
+
+
+</pre>
+</body>
+</html>

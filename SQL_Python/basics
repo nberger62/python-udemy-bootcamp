@@ -1,0 +1,10 @@
+CREATE TABLE dogs (
+    name TEXT,
+    breed TEXT,
+    age INTEGER
+);
+
+INSERT INTO dogs (name, breed, age) VALUES (Blue, GermanSheperd, 8);
+INSERT INTO dogs (name, breed, age) VALUES (Sally, Pitbull, 9);
+INSERT INTO dogs (name, breed, age) VALUES (Rocket, Poodle, 10);
+INSERT INTO dogs (name, breed, age) VALUES (fluffy, Shitzu, 11);
